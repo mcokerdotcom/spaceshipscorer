@@ -1,0 +1,35 @@
+<script>
+    var input = {
+        2:[100,200],
+        3:[110,190],
+        4:[105,145],
+        1:[90,150],
+        5:[102,198]
+    },
+        scores = {},
+        sortable = [];
+
+    for (var k in input) {
+        var start = input[k][0],
+            end = input[k][1];
+        scores[k] = 0;
+        for (var k2 in input) {
+            if (k != k2) {
+                var start2 = input[k2][0],
+                    end2 = input[k2][1];
+                if (start2 > start && end2 <= end) {
+                    scores[k] += 1;
+                }
+            }
+        }
+    }
+    for (var k in scores) {
+        sortable.push([k,scores[k]]);
+        sortable.sort(function(a, b) {
+            return a[1] - b[1];
+        });
+    }
+    for (var i = 0; i < sortable.length; i++) {
+        console.log(sortable[i][0] + ' ' + sortable[i][1]);
+    }
+</script>
