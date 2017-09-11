@@ -37,18 +37,18 @@ Sample Input and Output
 -----------------------
 
 Input:
-5
-2 100 200
-3 110 190
-4 105 145
-1 90 150
-5 102 198
+* 5
+* 2 100 200
+* 3 110 190
+* 4 105 145
+* 1 90 150
+* 5 102 198
 
 Output:
-3 0
-4 0
-1 1
-5 2
-2 3
+* 3 0
+* 4 0
+* 1 1
+* 5 2
+* 2 3
 
 Note that in the above example spaceship 3 has a score of 0 because no one starts after spaceship 3 (a drawback to this scoring system is the last spaceship always has a score of 0). Spaceship 4 also has a score of 0 because the only racer who starts after spaceship 4's start time (spaceship 3) has a later finish time. Spaceship 3 is listed ahead of spaceship 4 despite having a slower time because spaceship 3's id is lower.  At the other end, spaceship 2 has a score of 3 because spaceships 3, 4, and 5 start after spaceship 2 and finish before spaceship 2 finished.
